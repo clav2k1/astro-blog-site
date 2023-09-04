@@ -1,0 +1,20 @@
+---
+// const { title } = Astro.props
+
+import MainHead from './MainHead.astro';
+
+// interface Props {
+// 	title?: string;
+// 	description?: string;
+// }
+
+// const { title='default title', description='default description' } = Astro.props as Props
+const { title='default title', description='default description' } = Astro.props
+---
+
+<html lang="en">
+	<MainHead {title} {description} />
+	<body>
+		<slot>Default Text</slot>
+	</body>
+</html>
